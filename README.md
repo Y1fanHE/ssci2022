@@ -122,19 +122,19 @@ chmod a+x decompress
 cd ..
 ```
 
-Download data files for composite problems from `xxx`.
-
-```sh
-tar xvf psbext.tar
-gunzip -r -v psbext
-```
-
 Clone this repository and place benchmark dataset in the right places.
 
 ```sh
 git clone https://github.com/Y1fanHE/ssci2022
 cd ssci2022
 ln -s ../program-synthesis-benchmark-datasets/datasets psb
+```
+
+Download data files for composite problems from [xxx]().
+
+```sh
+tar xvf psbext.tar
+gunzip -r -v psbext
 ```
 
 Now, you are able to run the experiments.
