@@ -112,7 +112,7 @@ pip install .
 cd ..
 ```
 
-You also need to download data files for PSB1 problems
+You also need to download data files for PSB1 problems.
 
 ```sh
 git clone https://github.com/thelmuth/program-synthesis-benchmark-datasets.git
@@ -122,13 +122,19 @@ chmod a+x decompress
 cd ..
 ```
 
+Download data files for composite problems from `xxx`.
+
+```sh
+tar xvf psbext.tar
+gunzip -r -v psbext
+```
+
 Clone this repository and place benchmark dataset in the right places.
 
 ```sh
 git clone https://github.com/Y1fanHE/ssci2022
 cd ssci2022
 ln -s ../program-synthesis-benchmark-datasets/datasets psb
-gunzip -r -v psbext
 ```
 
 Now, you are able to run the experiments.
@@ -164,22 +170,15 @@ Then, edit parameters in `run2.sh` and run the script.
 
 ## PushGP+EP+ARM
 
-Edit Python code in `run2.py` with `replacement_rate=0.1` and `adaptation_rate=0.5`.
+Unzip the corresponding files in `arm_data/archive` (usually named as `[problem name]-r0.1-a0.5.tar`). Copy `run2.py` and `run2.sh` to the root directory of this project.
 
-```python
-est = ps(problem=problem,
-         search=search,
-         npop=int(npop),
-         ngen=int(ngen),
-         nproc=int(nproc),
-         seed=int(seed),
-         archive=garch,
-         replacement_rate=0.1,
-         adaptation_rate=0.5,
-         savepop=f"{problem}/{seed}.hst")
+```sh
+cp arm_data/archive/[problem name]-r0.1-a0.5.tar .
+tar xvf [problem name]-r0.1-a0.5.tar
+cp [problem name]-r0.1-a0.5/run2* .
 ```
 
-Then, edit parameters in `run2.sh` and run the script.
+Then, run the script.
 
 ```sh
 ./run2.sh
@@ -189,13 +188,13 @@ Then, edit parameters in `run2.sh` and run the script.
 
 ## PushGP+HP+ARM
 
-Download data archives from `xxx` and unzip the corresponding files (usually named as `[problem name]-r0.1-a0.5-h.tar`). Copy `run3.py` and `run3.sh` to the root directory of this project.
+Unzip the corresponding files in `arm_data/archive` (usually named as `[problem name]-r0.1-a0.5-h.tar`). Copy `run3.py` and `run3.sh` to the root directory of this project.
 
 ```sh
+cp arm_data/archive/[problem name]-r0.1-a0.5-h.tar .
 tar xvf [problem name]-r0.1-a0.5-h.tar
 cp [problem name]-r0.1-a0.5-h/run3* .
 ```
-
 
 Then, run the script.
 
@@ -229,7 +228,7 @@ r0.1-a0.5-h    -> PushGP+HP+ARM in Experiment I
 r0.1-a0.5-kdps -> PushGP+EP+ARM in Experiment II
 ```
 
-Please download the data file by `xxx`.
+Please download the data file by [xxx]().
 
 ## Analytical and Plotting script
 
