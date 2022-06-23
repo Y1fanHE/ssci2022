@@ -108,6 +108,7 @@ Before run the scripts, you need to install a modified version of `pyshgp`.
 ```sh
 git clone https://github.com/Y1fanHE/pyshgp
 cd pyshgp
+git checkout arm_dev
 pip install .
 cd ..
 ```
