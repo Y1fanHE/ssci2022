@@ -13,21 +13,22 @@ anytime_file = "anytime.csv"
 """Problems, Methods, Seeds"""
 
 problems = [ # Problems and short names
-    "small-or-large-string"
+    "median"
 ]
 problem_names = [
-    "SLSTR"
+    "MD"
 ]
 
 methods = [ # Methods and names
-    "r0.1-a0.5-kdps"
+    "r0.1-a0.5-kdps-r"
 ]
 method_names_map = {
     "r0.0-a0.0": "PushGP",
     "r0.1-a0.0": "PushGP+EP+RRM",
     "r0.1-a0.5": "PushGP+EP+ARM",
     "r0.1-a0.5-h": "PushGP+HP+ARM",
-    "r0.1-a0.5-kdps": "KDPS"
+    "r0.1-a0.5-kdps": "KDPS",
+    "r0.1-a0.5-kdps-r": "KDPSR"
 }
 method_names = [method_names_map[i] for i in methods]
 
