@@ -133,7 +133,7 @@ cd ssci2022
 ln -s ../program-synthesis-benchmark-datasets/datasets psb
 ```
 
-Download data files for composite problems from [psbext.tar file in the OneDrive folder](https://1drv.ms/u/s!AstDJAd6m317gZ0x0JAAHzKHgYAJiA?e=UzxAns).
+Download data files for composite problems from [psbext.tar file in the NutStore folder](https://www.jianguoyun.com/p/DcQPg7EQ98vQChjAk-sEIAA).
 
 ```sh
 tar xvf psbext.tar
@@ -214,24 +214,6 @@ Run the following scripts sequentially.
 ```sh
 ./run4.sh && ./run5.sh && ./run6.sh && ./run7.sh && ./run8.sh && ./run9.sh
 ```
-
-## Data Files
-
-The data is archived in `.tar` files with names as follows.
-
-```txt
-[problem name]-[method].tar
-
-methods
-----------
-               -> PushGP
-r0.0-a0.0      -> PushGP
-r0.1-a0.5      -> PushGP+EP+ARM in Experiment I
-r0.1-a0.5-h    -> PushGP+HP+ARM in Experiment I
-r0.1-a0.5-kdps -> PushGP+EP+ARM in Experiment II
-```
-
-Please download the data file from [the OneDrive folder](https://1drv.ms/u/s!AstDJAd6m317gZ0x0JAAHzKHgYAJiA?e=UzxAns).
 
 ## Analytical and Plotting script
 
