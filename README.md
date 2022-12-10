@@ -1,7 +1,5 @@
 # SSCI 2022
 
-**Important: the author changes his cloud storage from OneDrive to NutStore. The new link of the data used in the paper is available very soon.**
-
 ## Problems from PSB1
 
 ### Small or Large
